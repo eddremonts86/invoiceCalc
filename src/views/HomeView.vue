@@ -3,13 +3,13 @@
 </template>
 
 <script>
-import GlobalHome from "../components/GlobalHome";
+import { globalHome } from "@/domains/home/components";
 
 export default {
   name: "HomeView",
 
   components: {
-    GlobalHome,
+    globalHome,
   },
 };
 </script>
