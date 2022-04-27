@@ -1,32 +1,29 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
-  </div>
+  <v-app>
+    <v-app-bar app color="primary" dark flat>
+      <div class="d-flex align-center">
+        <v-icon large>mdi-cart</v-icon> Invoice Calculator
+      </div>
+      <v-spacer></v-spacer>
+      <router-link to="/" class="link">Home</router-link
+      ><router-link to="/calculator" class="link">Invoice Calc</router-link>
+    </v-app-bar>
+
+    <v-main class="blue lighten-5">
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<script>
+export default {
+  name: "App",
+};
+</script>
+<style lang="scss" scoped>
+.link {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 10px;
 }
 </style>
