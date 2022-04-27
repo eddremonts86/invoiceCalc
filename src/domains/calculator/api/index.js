@@ -3,6 +3,7 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
+  all,
 } from "./calculatorApi";
 
-export { fetchProducts, createProduct, updateProduct, deleteProduct };
+export { fetchProducts, createProduct, updateProduct, deleteProduct, all };

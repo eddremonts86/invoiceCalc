@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <h1>Invoice Calc</h1>
+      <h1>Invoice Calculator</h1>
     </v-col>
     <v-col cols="12"
       ><product-form @update-parent="updateProductTable"
@@ -22,5 +22,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

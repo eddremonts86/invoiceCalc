@@ -49,7 +49,6 @@ export default {
       sortDesc: [false],
     },
     loading: false,
-    serverItemsLength: 0,
     search: null,
     itemsSelected: [],
   }),
@@ -72,11 +71,11 @@ export default {
         q: this.search,
       };
     },
-    productsSelectedIds() {
+    productsSelectedId() {
       return this.itemsSelected.map(({ id }) => id);
     },
     hasProductsSelected() {
-      return this.productsSelectedIds.length > 0;
+      return this.productsSelectedId.length > 0;
     },
   },
   mounted() {
@@ -84,18 +83,18 @@ export default {
   },
   watch: {
     getProducts() {
-      this.updateProductTable();
+      this.updateInvoiceTotal();
     },
   },
   methods: {
     ...mapActions(["fetchProducts", "deleteProduct"]),
-    updatedItems(search) {
+    async updatedItems(search) {
       this.search = search;
-      this.products();
+      await this.products();
     },
-    updatedOptions(options) {
+    async updatedOptions(options) {
       this.options = options;
-      this.products();
+      await this.products();
     },
     itemSelected(items) {
       this.itemsSelected = items;
@@ -111,11 +110,11 @@ export default {
       }
     },
     async deleteProducts() {
-      await this.deleteProduct(this.productsSelectedIds);
-      await this.updateProductTable();
+      await this.deleteProduct(this.productsSelectedId);
+      await this.updateInvoiceTotal();
       await this.products();
     },
-    async updateProductTable() {
+    async updateInvoiceTotal() {
       await this.$refs.productTotalInvoiceRef.products();
     },
   },

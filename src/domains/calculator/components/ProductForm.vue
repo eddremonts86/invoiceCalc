@@ -4,14 +4,14 @@
       <v-col cols="12" md="6" sm="12">
         <v-text-field
           label="Product name"
-          v-model="ProductName"
+          v-model="productName"
           outlined
           hide-details
           dense
           clearable
           required
           :rules="requiredRule"
-        ></v-text-field>
+        />
       </v-col>
       <v-col cols="12" md="2" sm="6">
         <v-text-field
@@ -25,7 +25,7 @@
           type="number"
           min-number="0"
           :rules="requiredRule"
-        ></v-text-field>
+        />
       </v-col>
       <v-col cols="12" md="2" sm="6">
         <v-text-field
@@ -38,7 +38,7 @@
           required
           type="number"
           :rules="requiredRule"
-        ></v-text-field>
+        />
       </v-col>
       <v-col cols="12" md="2" sm="12">
         <v-btn
@@ -48,8 +48,8 @@
           :disabled="!isAllowedToSave"
         >
           <v-icon class="mx-3">mdi-cart-plus</v-icon>
-          Add</v-btn
-        >
+          Add
+        </v-btn>
       </v-col>
     </v-row>
   </v-form>
@@ -62,7 +62,7 @@ export default {
   name: "ProductForm",
   data() {
     return {
-      ProductName: null,
+      productName: null,
       price: null,
       quantity: null,
       valid: false,
@@ -80,7 +80,7 @@ export default {
       if (this.valid) {
         try {
           await this.createProduct({
-            name: this.ProductName,
+            name: this.productName,
             price: +this.price,
             quantity: +this.quantity,
             total: this.price * this.quantity,

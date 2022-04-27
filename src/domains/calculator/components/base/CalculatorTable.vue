@@ -21,7 +21,7 @@
         <v-col cols="12" sm="4" class="d-flex align-center">
           <span class="title">
             <v-icon large>mdi-cart</v-icon>
-            Products List
+            {{ title }}
           </span>
         </v-col>
         <v-spacer></v-spacer>
@@ -49,6 +49,10 @@
 export default {
   name: "calculatorTable",
   props: {
+    title: {
+      type: String,
+      default: "Products List",
+    },
     items: {
       type: Array,
       default: () => [],
