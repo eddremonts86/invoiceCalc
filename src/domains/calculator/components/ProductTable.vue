@@ -19,6 +19,7 @@
         @click="deleteProducts"
         :disabled="!hasProductsSelected"
         large
+        data-cy="delete-product-button"
       >
         <v-icon class="mx-3">mdi-delete</v-icon>
         Delete Products

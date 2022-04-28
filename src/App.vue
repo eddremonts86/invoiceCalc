@@ -5,8 +5,11 @@
         <v-icon large>mdi-cart</v-icon> Invoice Calculator
       </div>
       <v-spacer></v-spacer>
-      <router-link to="/" class="link">Home</router-link
-      ><router-link to="/calculator" class="link">Invoice Calc</router-link>
+      <router-link to="/" class="link" data-cy="home-root-link"
+        >Home</router-link
+      ><router-link to="/calculator" class="link" data-cy="home-calculator-link"
+        >Invoice Calc</router-link
+      >
     </v-app-bar>
 
     <v-main class="blue lighten-5">

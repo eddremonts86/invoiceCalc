@@ -11,6 +11,7 @@
           clearable
           required
           :rules="requiredRule"
+          data-cy="product-name-field"
         />
       </v-col>
       <v-col cols="12" md="2" sm="6">
@@ -25,6 +26,7 @@
           type="number"
           min-number="0"
           :rules="requiredRule"
+          data-cy="product-price-field"
         />
       </v-col>
       <v-col cols="12" md="2" sm="6">
@@ -38,6 +40,7 @@
           required
           type="number"
           :rules="requiredRule"
+          data-cy="product-quantity-field"
         />
       </v-col>
       <v-col cols="12" md="2" sm="12">
@@ -46,6 +49,7 @@
           block
           @click="addProduct"
           :disabled="!isAllowedToSave"
+          data-cy="add-product-button"
         >
           <v-icon class="mx-3">mdi-cart-plus</v-icon>
           Add

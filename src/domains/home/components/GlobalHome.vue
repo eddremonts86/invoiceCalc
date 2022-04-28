@@ -10,7 +10,13 @@
           full. That’s why you deserve an invoice generator app that puts you on
           the fast track to getting paid, the right way.
         </h3>
-        <v-btn class="my-8 primary" large role="link" to="/calculator">
+        <v-btn
+          class="my-8 primary"
+          large
+          role="link"
+          to="/calculator"
+          data-cy="invoice-calculator-button"
+        >
           <v-icon>mdi-cart</v-icon>Invoice Calc
         </v-btn>
       </v-col>

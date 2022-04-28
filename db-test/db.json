@@ -27,55 +27,6 @@
       "price": 1563,
       "quantity": 10,
       "total": 15630
-    },
-    {
-      "name": "ddfd",
-      "price": 2,
-      "quantity": 3,
-      "total": 6,
-      "id": 5
-    },
-    {
-      "name": "dcdfd",
-      "price": 23,
-      "quantity": 23,
-      "total": 529,
-      "id": 6
-    },
-    {
-      "name": "2xcxzz",
-      "price": 2,
-      "quantity": 3,
-      "total": 6,
-      "id": 7
-    },
-    {
-      "name": "xczz",
-      "price": 3,
-      "quantity": 3,
-      "total": 9,
-      "id": 8
-    },
-    {
-      "name": "cx",
-      "price": 3,
-      "quantity": 2,
-      "total": 6,
-      "id": 9
-    },
-    {
-      "name": "cvse",
-      "price": 2,
-      "quantity": 3,
-      "total": 6,
-      "id": 10
-    },
-    {
-      "name": "xzcx",
-      "price": 3,
-      "quantity": 3,
-      "total": 9,
-      "id": 11
     }
   ]
 }

@@ -10,8 +10,8 @@
     @update:options="$emit('update:options', optionsLocal)"
     @input="$emit('item-selected', selected)"
     show-select
-    selectable-key="name"
-    item-key="name"
+    selectable-key="id"
+    item-key="id"
     class="elevation-1"
     :loading="loading"
     loading-text="Loading..."
@@ -38,6 +38,7 @@
             rounded
             clearable
             @input="$emit('update:search', search)"
+            data-cy="search-product-field"
           />
         </v-col>
       </v-row>
@@ -71,7 +72,7 @@ export default {
     },
     singleSelect: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     multiSort: {
       type: Boolean,

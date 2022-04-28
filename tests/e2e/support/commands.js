@@ -23,3 +23,11 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("dataCyClick", (elementId) => {
+  cy.get('[data-cy="' + elementId + '"]').click();
+});
+
+Cypress.Commands.add("dataCyFillFieldInput", (elementId, data) => {
+  cy.get('[data-cy="' + elementId + '"]').type(data);
+});
