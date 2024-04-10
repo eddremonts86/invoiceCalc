@@ -1,32 +1,76 @@
 {
   "products": [
     {
+      "name": "Google cloud",
+      "price": 17,
+      "quantity": 1,
+      "total": 17,
       "id": 1,
-      "name": "Iphone 1",
-      "price": 1150,
-      "quantity": 15,
-      "total": 17250
+      "type": "Service"
     },
     {
+      "name": "HBO (video)",
+      "price": 89,
+      "quantity": 1,
+      "total": 89,
       "id": 2,
-      "name": "TV Lg",
-      "price": 745,
-      "quantity": 2,
-      "total": 1490
+      "type": "Service"
     },
     {
+      "name": "Microsoft (Xbox game )",
+      "price": 113,
+      "quantity": 1,
+      "total": 113,
       "id": 3,
-      "name": "Bike",
-      "price": 541,
-      "quantity": 7,
-      "total": 3787
+      "type": "Service"
     },
     {
-      "id": 4,
-      "name": "Car",
-      "price": 1563,
-      "quantity": 10,
-      "total": 15630
+      "name": "Service - Diego",
+      "price": 350,
+      "quantity": 1,
+      "total": 350,
+      "id": 5,
+      "type": "Savings"
+    },
+    {
+      "name": "Service - Carlos",
+      "price": 150,
+      "quantity": 1,
+      "total": 150,
+      "id": 6,
+      "type": "Savings"
+    },
+    {
+      "name": "Service - Siena",
+      "price": 150,
+      "quantity": 1,
+      "total": 150,
+      "id": 7,
+      "type": "Savings"
+    },
+    {
+      "name": "Github(Copilot)",
+      "price": 71,
+      "quantity": 1,
+      "total": 71,
+      "id": 8,
+      "type": "Service"
+    },
+    {
+      "name": "SETAPP LIMITED",
+      "price": 70,
+      "quantity": 1,
+      "total": 70,
+      "id": 9,
+      "type": "Service"
+    },
+    {
+      "name": "Patreon",
+      "price": 50,
+      "quantity": 1,
+      "total": 50,
+      "id": 11,
+      "type": "Service"
     }
   ]
 }

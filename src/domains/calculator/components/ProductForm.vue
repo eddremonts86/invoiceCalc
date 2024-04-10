@@ -1,7 +1,7 @@
 <template>
   <v-form ref="productFormRef" v-model="valid" lazy-validation>
     <v-row class="d-flex align-center">
-      <v-col cols="12" md="6" sm="12">
+      <v-col cols="12" md="4" sm="12">
         <v-text-field
           label="Product name"
           v-model="productName"
@@ -12,6 +12,22 @@
           required
           :rules="requiredRule"
           data-cy="product-name-field"
+        />
+      </v-col>
+      <v-col cols="12" md="2" sm="6">
+        <v-select
+          label="Type"
+          v-model="type"
+          outlined
+          hide-details
+          dense
+          clearable
+          required
+          :items="types"
+          item-text="text"
+          item-value="value"
+          :rules="requiredRule"
+          data-cy="product-type-field"
         />
       </v-col>
       <v-col cols="12" md="2" sm="6">
@@ -71,6 +87,21 @@ export default {
       quantity: null,
       valid: false,
       requiredRule: [(v) => !!v || "This field is required"],
+      type: null,
+      types: [
+        {
+          text: "Savings",
+          value: "Savings",
+        },
+        {
+          text: "Service",
+          value: "Service",
+        },
+        {
+          text: "Other",
+          value: "Other",
+        },
+      ],
     };
   },
   computed: {
@@ -87,6 +118,7 @@ export default {
             name: this.productName,
             price: +this.price,
             quantity: +this.quantity,
+            type: this.type,
             total: this.price * this.quantity,
           });
           this.reset();
